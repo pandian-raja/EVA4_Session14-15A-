@@ -41,9 +41,24 @@
  ![dataset](https://github.com/pandian-raja/EVA4_Session14-15A-/blob/master/dataset.png)
  
  4. Creation of Dataset
-    4.1 fg images is created with transparent by using https://www.remove.bg/ website.
-    4.2 Masks are created when fg_bg is created. 
  
+    4.1 fg images is created with transparent by using https://www.remove.bg/ website.
+    
+    4.2 Masks are created when fg_bg is created. While creating fg_bg, I was placing fg image randomly(x and y). I used the same x and y to create mask without background image and then I changed all the pixel values which are greater than zero into 255 to craete mask 
+    ```
+    ar1[ar1 > 0] = 255
+    ```
+    
+    4.3 Using random fuction, I calculate random x and y values and I used same x and y values to create both fg_bg and mask.
+    ```
+    xy = (random.randint(1, 200-w),random.randint(1, 104)) 
+    ```
+    4.4 Depth images are created using this repo(!git clone https://github.com/ialhashim/DenseDepth.git)
+  
+  5. Colab link for dataset creation: 
+  
+  6. Colab link for Statistics: https://github.com/pandian-raja/EVA4_Session14-15A-/blob/master/Dataset_Statistics.ipynb
+  
   
   
   
