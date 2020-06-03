@@ -29,11 +29,10 @@
   2.5 depth
   
   The depth images are created using https://github.com/ialhashim/DenseDepth.git repo.
-  
-    ``` 
+  ``` 
     Mean: 0.3627, 0.3627, 0.3627
     Std: 0.0827, 0.0827, 0.0827
-    ```
+  ```
     
   Total dataset size is 3.6 GB. All the images are in 224x224 size.
   
